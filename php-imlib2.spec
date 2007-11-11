@@ -6,7 +6,7 @@
 Summary:	Provides an image manipulation interface using libimlib2 for PHP
 Name:		php-%{modname}
 Version:	0.1.00
-Release:	%mkrel 13
+Release:	%mkrel 14
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/imlib2
@@ -50,6 +50,18 @@ install -d %{buildroot}%{_sysconfdir}/php.d
 
 install -m0755 %{soname} %{buildroot}%{_libdir}/php/extensions/
 install -m0644 %{inifile} %{buildroot}%{_sysconfdir}/php.d/
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
