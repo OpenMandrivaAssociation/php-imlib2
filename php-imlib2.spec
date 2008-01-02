@@ -16,6 +16,7 @@ Patch0:		imlib2-0.1.00-lib64.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	imlib2-devel
 Epoch:		1
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 imlib2 is a very fast image manipulation library, but without the support for
