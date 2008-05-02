@@ -6,7 +6,7 @@
 Summary:	Provides an image manipulation interface using libimlib2 for PHP
 Name:		php-%{modname}
 Version:	0.1.00
-Release:	%mkrel 15
+Release:	%mkrel 16
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/imlib2
@@ -16,7 +16,7 @@ Patch0:		imlib2-0.1.00-lib64.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	imlib2-devel
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 imlib2 is a very fast image manipulation library, but without the support for
