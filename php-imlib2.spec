@@ -9,7 +9,7 @@ Version:	0.1.00
 Release:	%mkrel 28
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/imlib2
+URL:		https://pecl.php.net/package/imlib2
 Source0:	imlib2-%{version}.tar.bz2
 Source1:	%{inifile}.bz2
 Patch0:		imlib2-0.1.00-lib64.diff
