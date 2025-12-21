@@ -13,6 +13,11 @@ URL:		https://pecl.php.net/package/imlib2
 Source0:	imlib2-%{version}.tar.bz2
 Source1:	%{inifile}.bz2
 Patch0:		imlib2-0.1.00-lib64.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	imlib2-devel
 Epoch:		1
